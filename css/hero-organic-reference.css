@@ -1,0 +1,40 @@
+/* LOQELO V9 — Organic photo hero inspired by user's reference screenshot.
+   Scope: hero artwork/shape only; approved copy, CTAs, navigation, sections
+   and pre-launch functionality are not modified.  Mobile-first / retina-ready. */
+.hero-refresh { isolation:isolate; background:linear-gradient(115deg,#f2fbf9 0%,#f7fdfb 37%,#edf9f5 85%); }
+.hero-refresh__layout {position:relative;}
+.hero-refresh__content {position:relative;z-index:3;}
+.hero-refresh__visual {position:relative; z-index:1; min-width:0; height:auto; width:100%; aspect-ratio:1672/941; margin:24px auto 0; overflow:visible;}
+.hero-refresh__photographic-art {position:relative;display:block;width:100%;height:100%;border-radius:18% 16px 23px 18% / 27% 16px 23px 23%;overflow:hidden;box-shadow:0 16px 38px rgba(10,65,64,.12);mask-image:none;-webkit-mask-image:none;transform:none;background:#f4f7f2;}
+.hero-refresh__photographic-art img {display:block;width:100%;height:100%;object-fit:cover;object-position:center;}
+.hero-refresh__visual::before {content:'';position:absolute;pointer-events:none;z-index:-1;left:-5%;top:-9%;width:50%;height:75%;background:radial-gradient(circle,#c9eae3 0%,rgba(202,236,228,.5) 55%,transparent 72%);border-radius:50%;}
+.hero-refresh__visual::after {content:'';position:absolute;pointer-events:none;z-index:-1;right:-8%;bottom:-10%;width:43%;height:45%;background:#d8f0eb;border-radius:50%;}
+/* The wide asset is kept intact on compact displays: no cropped laptop or mobile. */
+@media (min-width:720px) and (max-width:1099px) {
+ .hero-refresh__layout {grid-template-columns:1fr;min-height:0;padding-block:108px 38px;gap:8px;}
+ .hero-refresh__content{max-width:640px;}
+ .hero-refresh__visual{width:100%;max-width:990px;aspect-ratio:1672/941;margin:8px auto 0;height:auto;}
+ .hero-refresh__photographic-art{border-radius:19% 18px 28px 20% / 25% 18px 28px 24%;}
+}
+@media (min-width:1100px) {
+ .hero-refresh {min-height:700px;}
+ .hero-refresh__layout {grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);align-items:center;min-height:700px;gap:0;padding-block:106px 44px;}
+ .hero-refresh__content{padding-right:3%;max-width:565px;}
+ .hero-refresh__visual{width:100%;height:580px;aspect-ratio:auto;margin:0;overflow:visible;}
+ .hero-refresh__photographic-art{position:absolute;width:clamp(800px,60vw,1035px);height:auto;aspect-ratio:1672/941;top:50%;left:-75px;transform:translateY(-50%);border-radius:18% 0 0 25% / 25% 0 0 31%;box-shadow:none;mask-image:none;-webkit-mask-image:none;}
+ .hero-refresh__photographic-art img{width:100%;height:100%;object-fit:contain;object-position:center;}
+ .hero-refresh__visual::before{left:-12%;top:9%;width:320px;height:420px;}
+ .hero-refresh__visual::after{right:-16%;bottom:-6%;height:200px;}
+}
+@media (min-width:1600px) {
+ .hero-refresh {min-height:750px;}
+ .hero-refresh__layout{min-height:750px;}
+ .hero-refresh__visual{height:620px;}
+ .hero-refresh__photographic-art{width:min(61vw,1150px);height:auto;left:-25px;}
+}
+@media (max-width:719px) {
+ .hero-refresh__layout{padding-block:108px 28px;gap:0;}
+ .hero-refresh__visual{margin-top:21px;aspect-ratio:1672/941;width:100%;}
+ .hero-refresh__photographic-art{border-radius:16% 16px 20px 14% / 26% 16px 20px 24%;}
+}
+@media (prefers-reduced-motion:reduce){.hero-refresh__visual::before,.hero-refresh__visual::after {animation:none!important;}}

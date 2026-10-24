@@ -1,0 +1,32 @@
+/* LOQELO V9 / REALISTIC PHOTOGRAPHIC HERO
+   Only the approved hero media is replaced; headline, CTAs, navigation,
+   lower sections and the scrolling Designed For row remain unchanged.
+   One photographic artwork holds both devices, revealing the home scene.
+   Mobile-first rules, no JavaScript or additional third-party dependencies.
+*/
+.hero-refresh__visual{position:relative;isolation:isolate;overflow:visible;min-width:0;width:100%;height:auto;margin:20px 0 0;aspect-ratio:1672 / 941;}
+.hero-refresh__photographic-art{position:relative;display:block;width:100%;height:100%;border-radius:24px;overflow:hidden;box-shadow:0 22px 44px rgba(7,56,60,.12);}
+.hero-refresh__photographic-art img{display:block;width:100%;height:100%;object-fit:contain;max-width:none;}
+@media (min-width:720px) and (max-width:1099px){
+ .hero-refresh__layout{grid-template-columns:minmax(0,1fr);min-height:0;padding-block:105px 42px;gap:16px;}
+ .hero-refresh__content{max-width:630px;}
+ .hero-refresh__visual{margin:0 auto;width:100%;max-width:970px;aspect-ratio:1672 / 941;height:auto;}
+ .hero-refresh__photographic-art{border-radius:28px;}
+}
+@media (min-width:1100px){
+ .hero-refresh__layout{grid-template-columns:minmax(0,.90fr) minmax(0,1.10fr);min-height:680px;gap:6px;}
+ .hero-refresh__content{padding-right:0;}
+ .hero-refresh__visual{height:530px;width:100%;margin:0;aspect-ratio:auto;overflow:visible;}
+ .hero-refresh__photographic-art{position:absolute;left:-46px;top:50%;width:clamp(790px,66vw,940px);height:auto;aspect-ratio:1672 / 941;transform:translateY(-50%);border-radius:0;box-shadow:none;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 9%,#000 97%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 9%,#000 97%,transparent 100%);}
+ .hero-refresh__photographic-art img{width:100%;height:100%;object-fit:contain;}
+}
+@media (min-width:1600px){
+ .hero-refresh__visual{height:575px;}
+ .hero-refresh__photographic-art{width:min(66vw,1100px);}
+}
+@media (max-width:719px){
+ .hero-refresh__layout{padding-bottom:36px;}
+ .hero-refresh__visual{margin-top:24px;min-height:0;}
+ .hero-refresh__photographic-art{border-radius:20px;}
+}
+@media (prefers-reduced-motion:reduce){.hero-refresh__photographic-art{animation:none!important;}}
